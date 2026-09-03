@@ -1,0 +1,12 @@
+# Binaries
+/go-crash-course
+*.exe
+*.test
+*.out
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
