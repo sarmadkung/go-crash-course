@@ -27,7 +27,7 @@ gofmt -l .     # formatting check (no output = clean)
 ## Notes on the code
 
 - Everything lives in `package main` so lessons can call each other freely.
-- `lesson2()` calls `InfiniteLoop()` — comment that line out before running it, or you'll be there a while.
+- `lesson2()` leaves the `InfiniteLoop()` call commented out — uncomment it only if you want to stop the program with Ctrl+C.
 - Comments are deliberately verbose. This is a learning repo, not production code.
 
 ## Requirements
