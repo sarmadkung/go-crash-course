@@ -204,6 +204,21 @@ func variableScope() {
 
 }
 
+//7. shadowing
+// Shadowing occurs when an inner block declares a variable with the same name as a variable in an outer block.
+// The inner variable shadows the outer one within that inner block.
+// The outer variable is still accessible outside the inner block, but the inner variable is used within the inner block.
+
+func shadowing() {
+	outerX := 10
+	{
+		innerX := 20
+		outerX = innerX
+		fmt.Println(outerX)
+	}
+	fmt.Println(outerX)
+}
+
 func lesson2() {
 	isReadyToMarry(25)
 	isReadyToRetire(65)
@@ -216,4 +231,8 @@ func lesson2() {
 	breakAndContinue()
 	continueLoop()
 	fmt.Println(finWeekDay(1))
+	fmt.Println(isWeekday(1))
+	fmt.Println(isWeekdayWithoutExpression(1))
+	variableScope()
+	shadowing()
 }
