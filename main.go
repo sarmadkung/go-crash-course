@@ -19,4 +19,6 @@ func main() {
 	// Uncomment a lesson to run it.
 	// lesson1()
 	// lesson2()
+	// loop100()
+	arrayAndValues()
 }
