@@ -21,4 +21,6 @@ func main() {
 	// lesson2()
 	// loop100()
 	arrayAndValues()
+	maps()
+	quiz3()
 }
