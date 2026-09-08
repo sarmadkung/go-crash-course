@@ -23,4 +23,5 @@ func main() {
 	arrayAndValues()
 	maps()
 	quiz3()
+	lesson4()
 }
