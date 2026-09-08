@@ -131,6 +131,27 @@ func Withdraw(account *BankAccount, amount float64) error {
 }
 
 // Read only Methods
+// using account BankAccount as a value receiver, which means that the method cannot modify the original struct. This is useful for methods that only need to read data from the struct, rather than modify it.
+func (account BankAccount) Info() string {
+	return fmt.Sprintf("Owner: %s, Balance: %.2f", account.Owner, account.Balance)
+}
+
+// New new()
+// New is a built-in function that allocates memory for a new value of a given type and returns a pointer to it. It is often used to create new instances of structs or other types. The new function takes a type as an argument and returns a pointer to a newly allocated zero value of that type.
+var newUser = new(User) // Create a new User instance using new()
+var newUser2 = &User{}  // Create a new User instance using & and a composite literal
+// in modern go code you will often see the second form used more often than the first form
+
+// 🧠 The Most Important Mental Model
+// when we pass or assign a value its copied
+// when we pass or assign a pointer its copied but the pointer points to the same value
+
+// ⚠️ Important Clarification
+
+// You'll sometimes hear:
+// "Everything in Go is passed by value."
+// This is technically true.
+// Even pointers are passed by value.
 
 func lesson4() {
 	structs()
@@ -167,5 +188,6 @@ func lesson4() {
 	} else {
 		fmt.Println("Withdraw successful. New balance:", account.Balance) // Output: Withdraw successful. New balance: 1000
 	}
+	account.Info() // Output: Owner: John, Balance: 1000.00
 
 }
