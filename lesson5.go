@@ -21,7 +21,7 @@ type Dog struct {
 	Name string
 }
 
-func Speak(d Dog) {
+func (d Dog) Speak() {
 	fmt.Println("Woof")
 }
 
@@ -48,4 +48,5 @@ var cat = Cat{
 
 func lesson5() {
 	MakeAnimalSpeak(newDog)
+	MakeAnimalSpeak(cat)
 }
